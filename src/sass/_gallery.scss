@@ -1,0 +1,64 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+#gallery-section {
+    
+    height: auto !important;
+    .gallery {
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+            font-family: "My Soul", sans-serif;
+            color: #1d1c1c;
+            margin-bottom: 10px;
+            p {
+                font-size: 2.875rem; // 46px
+                padding-top: 7px;
+                @include responsive(font-size, (
+                    lg: 2.5rem, // 40px
+                    md: 1.25rem, // 36px
+                    sm: 1rem, // 32px
+                ));
+            }
+        }
+        .album {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "img1 img3"
+                "img1 img4"
+                "img5 img2"
+                "img6 img2";
+            gap: 20px;
+            // width: 400px;
+            margin: auto;
+            .img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .img1 {
+                grid-area: img1;
+            }
+            .img2 {
+                grid-area: img2;
+            }
+            .img3 {
+                grid-area: img3;
+            }
+            .img4 {
+                grid-area: img4;
+            }
+            .img5 {
+                grid-area: img5;
+            }
+            .img6 {
+                grid-area: img6;
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+@use "variables" as *;
+@use "breakpoints" as *;
+#wedding-info {
+    min-height: 100dvh;
+    .header-title {
+        text-align: center;
+        margin-bottom: 50px;
+        img {
+            width: 250px;
+        }
+        p {
+            font-family: "Allura", sans-serif;
+            font-size: 3.5rem; // 56px
+            color: #1d1c1c;
+            @include responsive(font-size, (
+                lg: 3rem,   // 48px
+                md: 2.5rem, // 40px
+                sm: 2rem    // 32px
+            ));
+        }
+    }
+    .image-gallery {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        img {
+            width: 30%;
+            border-radius: 20px;
+        }
+        img:nth-child(1),
+        img:nth-child(3) {
+            margin-top: 100px;
+            box-shadow: 0 0 8px rgba(152, 151, 151, 0.1);
+            @include responsive(margin-top, (
+                lg: 80px,
+                md: 60px,
+                sm: 20px
+            ));
+        }
+    }
+    .wedding-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        padding: 20px 0;
+        .title-body {
+            text-align: center;
+            padding: 10px 0;
+            .text-01 {
+                font-size: 2.5rem; // 40px
+                font-family: "Roboto Slab", sans-serif;
+                font-weight: 600;
+                letter-spacing: 2px;
+                @include responsive(font-size, (
+                    lg: 2.2rem, // 35.2px
+                    md: 2rem,   // 32px
+                    sm: 0.8125rem  // 13px
+                ));
+            }
+            .text-02 {
+                font-size: 2rem; // 32px
+                font-family: $font-family-accent;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+                @include responsive(font-size, (
+                    lg: 1.75rem, // 28px
+                    md: 1.5rem,  // 24px
+                    sm: 1.125rem // 18px
+                ));
+            }
+        }
+        .wedding-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 2rem;
+            font-family: $font-family-third;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #1d1c1c;
+            width: 100%;
+            height: 70px;
+            margin-bottom: 20px;
+            @include responsive(font-size, (
+                lg: 1.15rem, // 28px
+                md: 0.8rem,  // 24px
+                sm: 0.6rem  // 12px
+            ));
+            .hour {
+                width: 100%;
+                height: 100px;
+                border-right: 2px solid #1d1c1c;
+                display: flex;
+                // flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .month {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                gap: 1px;
+            }
+            .year {
+                width: 100%;
+                height: 100px;
+                border-left: 2px solid #1d1c1c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .lunar-calendar {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5rem; // 24px
+            font-family: "Roboto Slab", sans-serif;
+            font-style: italic;
+            @include responsive(font-size, (
+                lg: 1.25rem, // 20px
+                md: 1rem,    // 16px
+                sm: 0.875rem // 14px
+            ));
+        }
+        .title-footer {
+            text-align: center;
+            font-size: 1.5rem; // 24px
+            font-family: "Roboto Slab", sans-serif;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #1d1c1c;
+            margin: 20px 0;
+            @include responsive(font-size, (
+                lg: 1.25rem, // 20px
+                md: 1rem,    // 16px
+                sm: 0.875rem // 14px
+            ));
+        }
+        .wedding-location {
+            width: 60%;
+            border: 2px solid rgb(132, 9, 9);
+            border-radius: 20px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            color: #1d1c1c;
+            pointer-events: auto !important;
+            @include responsive(width, (
+                lg: 100%,
+                md: 100%,
+                sm: 100%
+            ));
+            @include responsive(font-size, (
+                lg: 1.25rem, // 20px
+                md: 0.85rem,    // 16px
+                sm: 0.5rem // 14px
+            ));
+            h3 {
+                font-family: "Roboto Slab", sans-serif;
+                font-weight: 500;
+                font-size: 2rem;
+                @include responsive(font-size, (
+                lg: 1.25rem, // 20px
+                md:1.15rem,    // 16px
+                sm: 1rem // 14px
+            ));
+            }
+            p {
+                font-size: 1.5rem; // 24px
+                font-family: "Roboto Slab", sans-serif;
+                font-weight: 400;
+                @include responsive(font-size, (
+                lg: 1rem, // 20px
+                md: 1rem,    // 16px
+                sm: 1rem // 14px
+            ));
+            }
+            a {
+                padding: 0 15px;
+            }
+            
+            .btn-chiduong {
+                background-color: rgb(198, 41, 41);
+                border-radius: 50px;
+                padding: 10px 25px;
+                text-decoration: none;
+                font-size: 1.5rem; // 24px
+                font-family: "Roboto Slab", sans-serif;
+                font-weight: 400;
+                color: #fff;
+                box-shadow: #ff0101 -1px 1px 25px -4px;
+                animation: pulse 1.2s ease-in-out infinite;
+                cursor: pointer;
+                @include responsive(font-size, (
+                    lg: 1.25rem, // 20px
+                    md: 1rem,    // 16px
+                    sm: 0.75rem // 14px
+                ));
+            }
+            @keyframes pulse {
+                0% {
+                    box-shadow: #ff0101 -1px 1px 25px -4px;
+                }
+                50% {
+                    box-shadow: #ff0101 -1px 1px 35px -4px;
+                }
+                100% {
+                    box-shadow: #ff0101 -1px 1px 25px -4px;
+                }
+            }
+        }
+    }
+}
