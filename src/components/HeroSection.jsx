@@ -1,4 +1,4 @@
-import image01 from "../assets/images/image01.jpg";
+import background2 from "../assets/images/background2.jpeg";
 import icon from "../assets/images/icon.png";
 import chu_hy from "../assets/images/chu_hy.png";
 
@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className="hero-invitation" data-aos="fade-in" data-aos-once="false">Thiệp mời</div>
 
             <div className="hero-couple-name" data-aos="fade-up" data-aos-once="false">
-              Lưu Tiền <span>&</span> Trần Phương
+              Đại Dương <span>&</span> Hà Uyên
             </div>
 
             <div className="hero-info">
@@ -20,13 +20,13 @@ const HeroSection = () => {
               <img src={icon} alt="" className="hero-icon-right" />
 
               <div className="hero-time" data-aos="fade-right" data-aos-once="false">
-                <h3>Thứ 7 - 11H00</h3>
-                <h5>27.12.2025</h5>
+                <h3>Thứ 7 - 16H30</h3>
+                <h5>24.1.2026</h5>
               </div>
             </div>
 
             <div className="hero-image" data-aos="zoom-in" data-aos-once="false">
-              <img src={image01} alt="" />
+              <img src={background2} alt="" />
             </div>
           </div>
         </div>

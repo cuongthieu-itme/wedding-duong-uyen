@@ -1,5 +1,5 @@
 import header from "../assets/images/header.png";
-import image02 from "../assets/images/image02.jpg";
+import background from "../assets/images/background.jpeg";
 
 const CoupleIntroSection = () => {
   return (
@@ -15,9 +15,9 @@ const CoupleIntroSection = () => {
                 data-aos-once="false"
               >
                 <div className="title">Nhà Trai</div>
-                <div className="name">Ông: Lưu Văn Thanh</div>
-                <div className="name">Bà: Phạm Thị Dương</div>
-                <div className="address">P. Tam Bình, Tp. Hổ Chí Minh</div>
+                <div className="name">Ông: Thiều Văn Vinh</div>
+                <div className="name">Bà: Thiều Văn Vinh</div>
+                <div className="address">Xã Văn Lý, Huyện Lý Nhân, Tỉnh Hà Nam</div>
               </div>
               <div
                 className="parent-section"
@@ -25,9 +25,9 @@ const CoupleIntroSection = () => {
                 data-aos-once="false"
               >
                 <div className="title">Nhà Gái</div>
-                <div className="name">Ông: Trần Khắc Thành</div>
-                <div className="name">Bà: Trần Thị Hương</div>
-                <div className="address">P. 2, Bảo Lộc, Lâm Đồng</div>
+                <div className="name">Ông: Thiều Văn Vinh</div>
+                <div className="name">Bà: Thiều Văn Vinh</div>
+                <div className="address">Xã Văn Lý, Huyện Lý Nhân, Tỉnh Hà Nam</div>
               </div>
             </div>
             <div className="couple">
@@ -43,7 +43,7 @@ const CoupleIntroSection = () => {
                 data-aos="fade-up-left"
                 data-aos-once="false"
               >
-                Lưu Văn Tiền
+                Thiều Đại Dương
               </div>
               <div
                 className="and"
@@ -57,11 +57,11 @@ const CoupleIntroSection = () => {
                 data-aos="fade-up-right"
                 data-aos-once="false"
               >
-                Trần Thị Phương
+                Trần Hà Uyên
               </div>
               <div className="image">
                 <img
-                  src={image02}
+                  src={background}
                   alt=""
                   data-aos="zoom-in"
                   data-aos-once="false"

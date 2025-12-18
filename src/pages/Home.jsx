@@ -7,13 +7,13 @@ import WeddingInfoSection from "../components/WeddingInfoSection";
 import GallerySection from "../components/GallerySection";
 import ThankYouSection from "../components/ThankYouSection";
 import { MdMusicOff, MdMusicNote } from "react-icons/md";
-import love_song from "../assets/music/love-song.mp3";
+import ngay_dau_tien from "../assets/music/ngay-dau-tien.mp3";
 
 
 const Home = () => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [introState, setIntroState] = useState("initial"); 
+  const [introState, setIntroState] = useState("initial");
   // initial → opening → hide → done
 
   const toggleMusic = () => {
@@ -64,7 +64,7 @@ const Home = () => {
       </div>
 
       {/* Nhạc nền */}
-      <audio ref={audioRef} src={love_song} autoPlay muted loop hidden />
+      <audio ref={audioRef} src={ngay_dau_tien} autoPlay muted loop hidden />
 
       {/* Nút nhạc */}
       {showContent && (

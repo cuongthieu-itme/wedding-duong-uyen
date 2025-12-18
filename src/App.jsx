@@ -8,14 +8,24 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: "ease-out",
+      easing: "ease-out-cubic",
       once: false,
-      offset: 0, // QUAN TRỌNG: để AOS trigger đúng
+      offset: 50,
       mirror: false,
+      anchorPlacement: "top-bottom",
+      disable: false,
     });
 
-    // Nếu muốn AOS nhận thay đổi DOM sau khi render thêm content:
+    // Refresh AOS khi DOM thay đổi
     AOS.refresh();
+
+    // Smooth scroll behavior
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <>
