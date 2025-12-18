@@ -20,8 +20,8 @@ const HeroSection = () => {
               <img src={icon} alt="" className="hero-icon-right" />
 
               <div className="hero-time" data-aos="fade-right" data-aos-once="false">
-                <h3>Thứ 7 - 16H30</h3>
-                <h5>24.1.2026</h5>
+                <h3>Thứ 7 - 17H30</h3>
+                <h5>24.01.2026</h5>
               </div>
             </div>
 

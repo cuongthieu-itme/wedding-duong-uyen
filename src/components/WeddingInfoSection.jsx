@@ -28,8 +28,8 @@ const WeddingInfoSection = () => {
                   </div>
                   <div className="wedding-time">
                     <div className="hour" data-aos="fade-right" data-aos-once="false">
-                      <p>Đón khách 16:00</p>
-                      <p>Khai tiệc 16:30</p>
+                      <p>Đón khách 17:30</p>
+                      <p>Khai tiệc 18:00</p>
                     </div>
                     <div className="month" data-aos="fade-up" data-aos-once="false">
                       <div className="day">Thứ 7</div>
@@ -46,8 +46,8 @@ const WeddingInfoSection = () => {
                   </div>
                   <div className="wedding-location" data-aos="zoom-in" data-aos-once="false">
                     <h3>TƯ GIA NHÀ TRAI</h3>
-                    <p>Thôn Quan Văn, Xã Văn Lý, Huyện Lý Nhân, Tỉnh Hà Nam</p>
-                    <a className="btn-chiduong" href="https://www.google.com/maps?q=10.8907833,106.7249187" target="_blank">Xem Bản đồ</a>
+                    <p>Thôn Quan Văn, Xã Lý Nhân, Tỉnh Ninh Bình</p>
+                    <a className="btn-chiduong" href="https://maps.app.goo.gl/YFxBPSmSxcVeZtRn6" target="_blank">Xem Bản đồ</a>
                   </div>
                 </div>
 

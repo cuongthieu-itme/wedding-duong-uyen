@@ -16,8 +16,8 @@ const CoupleIntroSection = () => {
               >
                 <div className="title">Nhà Trai</div>
                 <div className="name">Ông: Thiều Văn Vinh</div>
-                <div className="name">Bà: Thiều Văn Vinh</div>
-                <div className="address">Xã Văn Lý, Huyện Lý Nhân, Tỉnh Hà Nam</div>
+                <div className="name">Bà: Đỗ Thị Thuý</div>
+                <div className="address">Thôn Quan Văn, Xã Lý Nhân, Tỉnh Ninh Bình</div>
               </div>
               <div
                 className="parent-section"
@@ -25,9 +25,9 @@ const CoupleIntroSection = () => {
                 data-aos-once="false"
               >
                 <div className="title">Nhà Gái</div>
-                <div className="name">Ông: Thiều Văn Vinh</div>
-                <div className="name">Bà: Thiều Văn Vinh</div>
-                <div className="address">Xã Văn Lý, Huyện Lý Nhân, Tỉnh Hà Nam</div>
+                <div className="name">Ông: Nguyễn Văn Biên</div>
+                <div className="name">Bà: Lê Thị Nhâm</div>
+                <div className="address">Thôn Nội 2, Xã Bình Lục, Tỉnh Ninh Bình</div>
               </div>
             </div>
             <div className="couple">
@@ -57,7 +57,7 @@ const CoupleIntroSection = () => {
                 data-aos="fade-up-right"
                 data-aos-once="false"
               >
-                Trần Hà Uyên
+                Nguyễn Hà Uyên
               </div>
               <div className="image">
                 <img
