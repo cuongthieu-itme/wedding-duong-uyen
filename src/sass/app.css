@@ -1101,134 +1101,370 @@ section {
     font-size: 0.875rem;
   }
 }
-#wedding-info .wedding-details .wedding-location {
-  width: 60%;
-  border: 2px solid rgb(132, 9, 9);
-  border-radius: 20px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  color: #1d1c1c;
+/* Container cho 2 location cards */
+#wedding-info .wedding-details .wedding-locations-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin: 40px 0;
   pointer-events: auto !important;
 }
 @media (max-width: 1024px) {
-  #wedding-info .wedding-details .wedding-location {
-    width: 100%;
+  #wedding-info .wedding-details .wedding-locations-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 @media (max-width: 768px) {
-  #wedding-info .wedding-details .wedding-location {
-    width: 100%;
+  #wedding-info .wedding-details .wedding-locations-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
   }
 }
 @media (max-width: 480px) {
-  #wedding-info .wedding-details .wedding-location {
-    width: 100%;
+  #wedding-info .wedding-details .wedding-locations-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }
-@media (max-width: 1024px) {
-  #wedding-info .wedding-details .wedding-location {
-    font-size: 1.25rem;
-  }
-}
-@media (max-width: 768px) {
-  #wedding-info .wedding-details .wedding-location {
-    font-size: 0.85rem;
-  }
-}
-@media (max-width: 480px) {
-  #wedding-info .wedding-details .wedding-location {
-    font-size: 0.5rem;
-  }
 
-}
-#wedding-info .wedding-details .wedding-location h3 {
-  font-family: "Roboto Slab", sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
+/* Card location chung */
+#wedding-info .wedding-details .wedding-location-card {
+  background: #fff;
+  border-radius: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1024px) {
-  #wedding-info .wedding-details .wedding-location h3 {
-    font-size: 1.25rem;
+  #wedding-info .wedding-details .wedding-location-card {
+    padding: 35px 25px;
   }
 }
 @media (max-width: 768px) {
-  #wedding-info .wedding-details .wedding-location h3 {
-    font-size: 1.15rem;
+  #wedding-info .wedding-details .wedding-location-card {
+    padding: 30px 20px;
   }
 }
 @media (max-width: 480px) {
-  #wedding-info .wedding-details .wedding-location h3 {
-    font-size: 1rem;
+  #wedding-info .wedding-details .wedding-location-card {
+    padding: 25px 18px;
   }
 }
-#wedding-info .wedding-details .wedding-location p {
-  font-size: 1.5rem;
+
+/* Gradient top border */
+#wedding-info .wedding-details .wedding-location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c62929, #ebae2a, #c62929);
+  transition: height 0.5s ease;
+}
+
+#wedding-info .wedding-details .wedding-location-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+}
+
+#wedding-info .wedding-details .wedding-location-card:hover::before {
+  height: 100%;
+  opacity: 0.05;
+}
+
+#wedding-info .wedding-details .wedding-location-card:hover .location-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+#wedding-info .wedding-details .wedding-location-card:hover .btn-map {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header với icon */
+#wedding-info .wedding-details .wedding-location-card .location-header {
+  margin-bottom: 25px;
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #ebae2a 0%, #ffd93d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(235, 174, 42, 0.4);
+}
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper .location-icon {
+  font-size: 2.5rem;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper .location-icon {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper .location-icon {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .icon-wrapper .location-icon {
+    font-size: 1.8rem;
+  }
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-header .location-title {
   font-family: "Roboto Slab", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #c62929;
+  margin: 0;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .location-title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .location-title {
+    font-size: 1.35rem;
+  }
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-header .location-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Body với địa chỉ */
+#wedding-info .wedding-details .wedding-location-card .location-body {
+  margin: 25px 0;
+  padding: 20px 0;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-body {
+    margin: 20px 0;
+    padding: 18px 0;
+  }
+}
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-body {
+    margin: 18px 0;
+    padding: 15px 0;
+  }
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-body {
+    margin: 15px 0;
+    padding: 12px 0;
+  }
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-body .location-address {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1.125rem;
   font-weight: 400;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
 }
 @media (max-width: 1024px) {
-  #wedding-info .wedding-details .wedding-location p {
-    font-size: 1rem;
+  #wedding-info .wedding-details .wedding-location-card .location-body .location-address {
+    font-size: 1.05rem;
   }
 }
 @media (max-width: 768px) {
-  #wedding-info .wedding-details .wedding-location p {
+  #wedding-info .wedding-details .wedding-location-card .location-body .location-address {
     font-size: 1rem;
   }
 }
 @media (max-width: 480px) {
-  #wedding-info .wedding-details .wedding-location p {
-    font-size: 1rem;
+  #wedding-info .wedding-details .wedding-location-card .location-body .location-address {
+    font-size: 0.95rem;
   }
+}
 
+/* Footer với button */
+#wedding-info .wedding-details .wedding-location-card .location-footer {
+  margin-top: 25px;
+  position: relative;
+  z-index: 1;
 }
-#wedding-info .wedding-details .wedding-location a {
-  padding: 0 15px;
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer {
+    margin-top: 20px;
+  }
 }
-#wedding-info .wedding-details .wedding-location .btn-chiduong {
-  background-color: rgb(198, 41, 41);
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer {
+    margin-top: 18px;
+  }
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer {
+    margin-top: 15px;
+  }
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 35px;
   border-radius: 50px;
-  padding: 10px 25px;
-  text-decoration: none;
-  font-size: 1.5rem;
   font-family: "Roboto Slab", sans-serif;
-  font-weight: 400;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
   color: #fff;
-  box-shadow: #ff0101 -1px 1px 25px -4px;
-  animation: pulse 1.2s ease-in-out infinite;
+  background: linear-gradient(135deg, #c62929 0%, #d64545 100%);
+  box-shadow: 0 8px 25px rgba(198, 41, 41, 0.4);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1024px) {
-  #wedding-info .wedding-details .wedding-location .btn-chiduong {
-    font-size: 1.25rem;
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map {
+    padding: 13px 30px;
+    font-size: 1.05rem;
+    gap: 8px;
   }
 }
 @media (max-width: 768px) {
-  #wedding-info .wedding-details .wedding-location .btn-chiduong {
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map {
+    padding: 12px 28px;
     font-size: 1rem;
+    gap: 8px;
   }
 }
 @media (max-width: 480px) {
-  #wedding-info .wedding-details .wedding-location .btn-chiduong {
-    font-size: 0.75rem;
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    gap: 6px;
   }
 }
-@keyframes pulse {
-  0% {
-    box-shadow: #ff0101 -1px 1px 25px -4px;
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map .btn-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+@media (max-width: 1024px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map .btn-icon {
+    font-size: 1.2rem;
   }
-  50% {
-    box-shadow: #ff0101 -1px 1px 35px -4px;
+}
+@media (max-width: 768px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map .btn-icon {
+    font-size: 1.1rem;
   }
-  100% {
-    box-shadow: #ff0101 -1px 1px 25px -4px;
+}
+@media (max-width: 480px) {
+  #wedding-info .wedding-details .wedding-location-card .location-footer .btn-map .btn-icon {
+    font-size: 1rem;
   }
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map .btn-text {
+  position: relative;
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map:hover::before {
+  left: 100%;
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map:hover .btn-icon {
+  transform: scale(1.2) rotate(15deg);
+}
+
+#wedding-info .wedding-details .wedding-location-card .location-footer .btn-map:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Màu riêng cho nhà gái - tone vàng gold */
+#wedding-info .wedding-details .wedding-location-card.bride-side .icon-wrapper {
+  background: linear-gradient(135deg, #ebae2a 0%, #f5c563 100%);
+  box-shadow: 0 10px 30px rgba(235, 174, 42, 0.4);
+}
+
+#wedding-info .wedding-details .wedding-location-card.bride-side .location-title {
+  color: #ebae2a;
+}
+
+#wedding-info .wedding-details .wedding-location-card.bride-side .btn-map {
+  background: linear-gradient(135deg, #ebae2a 0%, #f5c563 100%);
+  box-shadow: 0 8px 25px rgba(235, 174, 42, 0.4);
+}
+
+#wedding-info .wedding-details .wedding-location-card.bride-side .btn-map:hover {
+  box-shadow: 0 10px 30px rgba(235, 174, 42, 0.5);
+}
+
+/* Màu riêng cho nhà trai - tone đỏ */
+#wedding-info .wedding-details .wedding-location-card.groom-side .icon-wrapper {
+  background: linear-gradient(135deg, #c62929 0%, #d64545 100%);
+  box-shadow: 0 10px 30px rgba(198, 41, 41, 0.4);
+}
+
+#wedding-info .wedding-details .wedding-location-card.groom-side .location-title {
+  color: #c62929;
+}
+
+#wedding-info .wedding-details .wedding-location-card.groom-side .btn-map {
+  background: linear-gradient(135deg, #c62929 0%, #d64545 100%);
+  box-shadow: 0 8px 25px rgba(198, 41, 41, 0.4);
+}
+
+#wedding-info .wedding-details .wedding-location-card.groom-side .btn-map:hover {
+  box-shadow: 0 10px 30px rgba(198, 41, 41, 0.5);
 }
 
 #gallery-section {

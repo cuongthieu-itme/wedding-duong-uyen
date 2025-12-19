@@ -44,10 +44,51 @@ const WeddingInfoSection = () => {
                   <div className="title-footer" data-aos="fade-up-left" data-aos-once="false">
                     <p>BUỔI TIỆC ĐƯỢC TỔ CHỨC TẠI</p>
                   </div>
-                  <div className="wedding-location" data-aos="zoom-in" data-aos-once="false">
-                    <h3>TƯ GIA NHÀ TRAI</h3>
-                    <p>Thôn Quan Văn, Xã Lý Nhân, Tỉnh Ninh Bình</p>
-                    <a className="btn-chiduong" href="https://maps.app.goo.gl/YFxBPSmSxcVeZtRn6" target="_blank">Xem Bản đồ</a>
+
+                  <div className="wedding-locations-wrapper">
+                    {/* Nhà Trai */}
+                    <div className="wedding-location-card groom-side" data-aos="fade-right" data-aos-once="false">
+                      <div className="location-header">
+                        <div className="icon-wrapper">
+                          <span className="location-icon">📍</span>
+                        </div>
+                        <h3 className="location-title">TƯ GIA NHÀ TRAI</h3>
+                      </div>
+                      <div className="location-body">
+                        <p className="location-address">
+                          Thôn Quan Văn, Xã Lý Nhân<br/>
+                          Tỉnh Ninh Bình
+                        </p>
+                      </div>
+                      <div className="location-footer">
+                        <a className="btn-map groom-btn" href="https://maps.app.goo.gl/YFxBPSmSxcVeZtRn6" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-icon">🗺️</span>
+                          <span className="btn-text">Xem Bản Đồ</span>
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Nhà Gái */}
+                    <div className="wedding-location-card bride-side" data-aos="fade-left" data-aos-once="false">
+                      <div className="location-header">
+                        <div className="icon-wrapper">
+                          <span className="location-icon">📍</span>
+                        </div>
+                        <h3 className="location-title">TƯ GIA NHÀ GÁI</h3>
+                      </div>
+                      <div className="location-body">
+                        <p className="location-address">
+                          Thôn Nội 2, Xã Bình Lục<br/>
+                          Tỉnh Ninh Bình
+                        </p>
+                      </div>
+                      <div className="location-footer">
+                        <a className="btn-map bride-btn" href="https://maps.app.goo.gl/FRK2zaMTitgEPsFd9" target="_blank" rel="noopener noreferrer">
+                          <span className="btn-icon">🗺️</span>
+                          <span className="btn-text">Xem Bản Đồ</span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
