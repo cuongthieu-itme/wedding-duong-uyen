@@ -64,7 +64,7 @@ const Home = () => {
       </div>
 
       {/* Nhạc nền */}
-      <audio ref={audioRef} src={ngay_dau_tien} autoPlay muted loop hidden />
+      {/* <audio ref={audioRef} src={ngay_dau_tien} autoPlay muted loop hidden /> */}
 
       {/* Nút nhạc */}
       {showContent && (

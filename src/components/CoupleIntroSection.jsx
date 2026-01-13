@@ -1,5 +1,5 @@
 import header from "../assets/images/header.png";
-import background from "../assets/images/background.jpeg";
+import anhthu2 from "../assets/images/anhthu2.jpg";
 
 const CoupleIntroSection = () => {
   return (
@@ -61,7 +61,7 @@ const CoupleIntroSection = () => {
               </div>
               <div className="image">
                 <img
-                  src={background}
+                  src={anhthu2}
                   alt=""
                   data-aos="zoom-in"
                   data-aos-once="false"

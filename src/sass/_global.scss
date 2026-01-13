@@ -103,3 +103,20 @@
     }
   }
 
+/* =========================================================
+   3) IMAGE STYLES - Full và chính giữa
+   ========================================================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+  /* Đảm bảo ảnh hiển thị full và chính giữa khi có object-fit */
+  &[style*="object-fit"],
+  &.img,
+  &[class*="img"] {
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+

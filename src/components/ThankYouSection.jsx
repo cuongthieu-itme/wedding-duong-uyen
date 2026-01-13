@@ -1,11 +1,11 @@
-import background2 from "../assets/images/background2.jpeg";
+import anhbia from "../assets/images/anhbia.jpg";
 
 const ThankYouSection = () => {
   return (
     <section id="thank-you-section">
       <div className="footer">
         <div className="footer-image">
-          <img src={background2} alt="Wedding couple" />
+          <img src={anhbia} alt="Wedding couple" />
           <div className="overlay"></div>
         </div>
         <div className="footer-content" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">

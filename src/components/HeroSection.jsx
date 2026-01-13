@@ -1,6 +1,7 @@
 import background2 from "../assets/images/background2.jpeg";
 import icon from "../assets/images/icon.png";
 import chu_hy from "../assets/images/chu_hy.png";
+import anhdautien from "../assets/images/anhdautien.jpg";
 
 const HeroSection = () => {
   return (
@@ -20,13 +21,13 @@ const HeroSection = () => {
               <img src={icon} alt="" className="hero-icon-right" />
 
               <div className="hero-time" data-aos="fade-right" data-aos-once="false">
-                <h3>Thứ 7 - 17H30</h3>
+                <h3>Thứ 7 - 18H00</h3>
                 <h5>24.01.2026</h5>
               </div>
             </div>
 
             <div className="hero-image" data-aos="zoom-in" data-aos-once="false">
-              <img src={background2} alt="" />
+              <img src={anhdautien} alt="" />
             </div>
           </div>
         </div>

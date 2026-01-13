@@ -1,7 +1,7 @@
 import title_image from "../assets/images/title.png";
-import gallery01 from "../assets/images/gallery01.jpeg";
-import gallery02 from "../assets/images/gallery02.jpeg";
-import gallery03 from "../assets/images/gallery03.jpeg";
+import anhthu3 from "../assets/images/anhthu3.jpg";
+import anhthu6 from "../assets/images/anhthu6.jpg";
+import anhthu5 from "../assets/images/anhthu5.jpg";
 
 const WeddingInfoSection = () => {
   return (
@@ -14,11 +14,11 @@ const WeddingInfoSection = () => {
               <p>Trân Trọng Kính Mời</p>
             </div>
             <div className="image-gallery">
-              <img src={gallery01} alt="image gallery 1" data-aos="zoom-in"
+              <img src={anhthu3} alt="image gallery 1" data-aos="zoom-in"
             data-aos-once="false" />
-              <img src={gallery02} alt="image gallery 2" data-aos="zoom-in-up"
+              <img src={anhthu6} alt="image gallery 2" data-aos="zoom-in-up"  
             data-aos-once="false"/>
-              <img src={gallery03} alt="image gallery 3" data-aos="zoom-in-down"
+              <img src={anhthu5} alt="image gallery 3" data-aos="zoom-in-down"
             data-aos-once="false" />
             </div>
                 <div className="wedding-details">
